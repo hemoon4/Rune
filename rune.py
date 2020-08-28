@@ -29,7 +29,6 @@ class Rune:
 
         url = f'https://eune.op.gg/champion/{champion}/statistics'
         self.page = requests.get(url)
-        print(self.page.url)
     def parse_page(self):
         self.html = soup(self.page.content, 'html.parser')
         # table with necessary data
